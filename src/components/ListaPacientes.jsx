@@ -1,6 +1,6 @@
 import { Paciente } from "./Paciente";
 
-const ListPatient = ({ pacientes }) =>{
+const ListaPacientes = ({ pacientes }) =>{
   console.log(pacientes);
   return (
     <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-x-scroll">
@@ -14,6 +14,7 @@ const ListPatient = ({ pacientes }) =>{
         
         <Paciente
           paciente={paciente}
+          
          />
         
       })}
@@ -23,4 +24,4 @@ const ListPatient = ({ pacientes }) =>{
   );
 }
 
-export default ListPatient;
+export default ListaPacientes;

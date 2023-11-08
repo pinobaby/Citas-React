@@ -1,11 +1,10 @@
 import { useState } from "react";
-import Form from "./components/Form";
+import Form from "./components/Formulario";
 import Header from "./components/Header";
-import ListPatient from "./components/PatientList";
+import ListaPacientes from "./components/ListaPacientes";
 
 function App() {
   const [pacientes, setPacientes] = useState([]);
-
 
   return (
     <div className="container mx-auto mt-20">
@@ -15,7 +14,7 @@ function App() {
          pacientes = {pacientes}
          setPacientes = {setPacientes}
         />
-        <ListPatient
+        <ListaPacientes
         pacientes = {pacientes}
         setPacientes = {setPacientes}
         />

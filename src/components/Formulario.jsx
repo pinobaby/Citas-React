@@ -9,6 +9,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente}) => {
   const [email, setEmail] = useState("");
   const [fecha, setFecha] = useState("");
   const [sintomas, setSintomas] = useState("");
+
   const [error, setError] = useState(false);
 
     
@@ -28,7 +29,7 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente}) => {
 
 
   const generarId = () => {
-    const random = Math.random().toString(36).substring(2);
+    const random = Math.random().toString(36).substr(2);
     const fecha = Date.now().toString(36);
     return fecha + random;
   };
@@ -63,11 +64,9 @@ const Formulario = ({ pacientes, setPacientes, paciente, setPaciente}) => {
     }else{
      //Nuevo registro de paciente
       objetoPaciente.id = generarId();
-      setPacientes(...pacientes, objetoPaciente)
+      setPacientes([...pacientes, objetoPaciente])
     }
 
-  
-    setPacientes([...pacientes, objetoPaciente]);
 
     //reiniciar el formulario
     setNombre("");
